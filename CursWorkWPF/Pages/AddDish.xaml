@@ -1,0 +1,46 @@
+﻿<Page x:Class="CursWorkWPF.Pages.AddDish"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CursWorkWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddDish">
+
+    <Grid>
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Название блюда" Grid.Row="0" Grid.Column="0" FontWeight="Light" FontFamily="Helvetica" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding names}" x:Name="nameDish" Grid.Row="0" Grid.Column="1" FontWeight="Light" FontFamily="Helvetica" FontSize="30" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300"/>
+
+            <TextBlock Text="Описание" Grid.Row="1" Grid.Column="0" FontWeight="Light" FontFamily="Helvetica" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding descriptions}" x:Name="descrDish" Grid.Row="1" Grid.Column="1" FontWeight="Light" FontFamily="Helvetica" FontSize="30" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300"/>
+
+            <TextBlock Text="Вес  (г)" Grid.Row="2" Grid.Column="0" FontWeight="Light" FontFamily="Helvetica" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding weights}" x:Name="weightDish" Grid.Row="2" Grid.Column="1" FontWeight="Light" FontFamily="Helvetica" FontSize="30" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300"/>
+
+            <TextBlock Text="Стоимость" Grid.Row="3" Grid.Column="0" FontWeight="Light" FontFamily="Helvetica" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding price}" x:Name="priceDish" Grid.Row="3" Grid.Column="1" FontWeight="Light" FontFamily="Helvetica" FontSize="30" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300"/>
+
+            <Button x:Name="saveData" Grid.Row="5" Grid.Column="0" Click="saveData_Click" Width="150" Height="40" Content="Добавить" Margin="0 0 30 0" HorizontalAlignment="Right"/>
+            <Button x:Name="clearData" Grid.Row="5" Grid.Column="1" Click="clearData_Click" Width="150" Height="40" Content="Очистить" Margin="30 0 0 0" HorizontalAlignment="Left"/>
+
+        </Grid>
+
+    </Grid>
+
+</Page>
